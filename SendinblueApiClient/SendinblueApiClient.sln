@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendinblueApiClient", "SendinblueApiClient\SendinblueApiClient.csproj", "{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDA1DC72-D430-4974-913B-9D208D49494F}
+	EndGlobalSection
+EndGlobal
