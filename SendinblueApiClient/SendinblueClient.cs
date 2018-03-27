@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using RestSharp;
 using SendinblueApiClient.Models;
 
@@ -70,42 +68,4 @@ namespace SendinblueApiClient
             return client.Execute(request);
         }
     }
-
-    public class Sender
-    {
-        public string name { get; set; }
-        public string email { get; set; }
-    }
-
-    public class Template
-    {
-        public int Id { get; set; }
-        public string name { get; set; }
-        public string subject { get; set; }
-        public bool isActive { get; set; }
-        public bool testSent { get; set; }
-        public Sender sender { get; set; }
-        public string replyTo { get; set; }
-        public string toField { get; set; }
-        public string tag { get; set; }
-        public string htmlContent { get; set; }
-        public DateTime createdAt { get; set; }
-        public DateTime modifiedAt { get; set; }
-    }
-
-    public class ListModel
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public int totalSubscribers { get; set; }
-        public int totalBlacklisted { get; set; }
-        public int folderId { get; set; }
-    }
-
-    public class Lists
-    {
-        public List<ListModel> lists { get; set; }
-        public int count { get; set; }
-    }
-
 }
