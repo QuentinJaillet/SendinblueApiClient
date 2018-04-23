@@ -18,5 +18,8 @@ namespace SendinblueApiClient
 
         [JsonProperty("updateEnabled")]
         public bool UpdateEnabled { get; set; }
+
+        [JsonProperty("attributes")]
+        public Attributes Attributes { get; set; }
     }
 }

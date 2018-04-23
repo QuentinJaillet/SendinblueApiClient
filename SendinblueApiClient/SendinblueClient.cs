@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using RestSharp;
 using SendinblueApiClient.Models;
 
@@ -24,6 +26,16 @@ namespace SendinblueApiClient
             return JsonConvert.DeserializeObject<Lists>(response.Content);
         }
 
+        public ContactsResponse GetContacts()
+        {
+            var client = new RestClient("https://api.sendinblue.com/v3/contacts");
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("content-type", "application/json");
+            request.AddHeader("api-key", _apiKey);
+            IRestResponse response = client.Execute(request);
+            return JsonConvert.DeserializeObject<ContactsResponse>(response.Content);
+        }
+
         public void CreateContact(CreateContactModel model)
         {
             var json = JsonConvert.SerializeObject(model);
@@ -45,6 +57,21 @@ namespace SendinblueApiClient
         {
             var response = GetRestRequest("smtp/templates");
             return JsonConvert.DeserializeObject<Templates>(response.Content);
+        }
+
+        public void SendTemplate()
+        {
+            /*var client = new RestClient("https://api.sendinblue.com/v3/smtp/templates/1/send");
+            var request = new RestRequest(Method.POST);
+            request.AddParameter("undefined", "{\"emailTo\":[\"quentin.jaillet@gmail.com\"],\"emailBcc\":[\"quentin.jaillet@gmail.com\"],\"emailCc\":[\"quentin.jaillet@gmail.com\", \"attributes\": {\"EMAIL_VALIDATION_URL\":\"value3333\"} }", ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);*/
+
+            var client = new RestClient("https://api.sendinblue.com/v3/smtp/templates/1/send");
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("content-type", "application/json");
+            request.AddHeader("api-key", _apiKey);
+            request.AddParameter("undefined", "{\"emailTo\":[\"quentin.jaillet@gmail.com\"],\"emailBcc\":[\"quentin.jaillet@gmail.com\"],\"emailCc\":[\"quentin.jaillet@gmail.com\", \"attr\":\"\" ]}", ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);
         }
 
         public void SendTemplate(int templateId, string emailTo)
