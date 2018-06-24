@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendinblueApiClient", "SendinblueApiClient\SendinblueApiClient.csproj", "{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendinblueApiClient.Tests", "SendinblueApiClient.Tests\SendinblueApiClient.Tests.csproj", "{0713B50D-9194-4FFD-8DE7-415E88F5FEA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B215A0-4F1C-4C78-B4AC-8CBFA92DF18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0713B50D-9194-4FFD-8DE7-415E88F5FEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0713B50D-9194-4FFD-8DE7-415E88F5FEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0713B50D-9194-4FFD-8DE7-415E88F5FEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0713B50D-9194-4FFD-8DE7-415E88F5FEA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
